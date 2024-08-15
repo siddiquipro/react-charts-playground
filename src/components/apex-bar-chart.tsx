@@ -16,6 +16,24 @@ export default function ApexBarChart() {
           show: false,
         },
       },
+      plotOptions: {
+        bar: {
+          dataLabels: {
+            position: "top",
+          },
+        },
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function (val) {
+          return val + "%";
+        },
+        offsetY: -20,
+        style: {
+          fontSize: "12px",
+          colors: ["#000"],
+        },
+      },
       colors: ["#a70000", "#ff0000", "#ff5252", "#ff7b7b", "#ffbaba"],
       labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
       legend: {
